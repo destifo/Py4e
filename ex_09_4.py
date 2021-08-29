@@ -18,7 +18,6 @@ bigCount = None
 for k in userCount:
     if bigCount is None or userCount[k] > bigCount:
         bigWord = k
-
-bigCount = userCount[k]
+        bigCount = userCount[k]
 
 print("The user", bigWord, "sent the most messages", bigCount, "times")
