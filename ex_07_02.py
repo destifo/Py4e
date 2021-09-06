@@ -6,7 +6,7 @@ kwlcount = 0
 for line in fh:
     if not line.startswith("X-DSPAM-Confidence:"):
         continue
-    #print(line)
+    #print(lin)
     pos1 = line.find(':')
     newstr = line[pos1 + 1:]
     total = total + float(newstr.strip())
