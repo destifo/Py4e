@@ -1,4 +1,4 @@
-# Use the file name mbox-short.txt as the file name
+# Use the file name mbox-short.txt as the file name...
 fname = input("Enter file name: ")
 fh = open(fname)
 total = 0
