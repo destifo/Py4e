@@ -11,3 +11,4 @@ while True:
         break
     fh = data.decode()
     print(fh)
+mysock.close()
