@@ -9,7 +9,7 @@ ctx.verify_mode = ssl.CERT_NONE
 api_key = False
 if api_key is False:
     api_key = 42
-    serviceurl = 'http://py4e-data.dr-chuck.net/json?'
+    serviceurl = 'http://py4e-data.dr-chuck.net/geojson?'
 else :
     serviceurl = 'https://maps.googleapis.com/maps/api/geocode/json?'
 
@@ -42,4 +42,8 @@ while True:
         print("==== Failed to retrieve the data ====")
         print(data)
         continue
+    lat = js["results"][0]["geometry"]["location"]["lat"]
+    lng = js["results"][0]["geometry"]["location"]["lng"]
+    location = js["results"][0]["formatted_address"]
     print('Place id:', js["results"][0]["place_id"])
+    print('location:', location)
